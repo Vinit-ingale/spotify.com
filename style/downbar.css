@@ -1,0 +1,127 @@
+.downbar{
+    z-index: 1000;
+    display: flex;
+    position: fixed;
+    bottom:0;
+    left: 0;
+    right: 0;
+    height: 90px;
+    background-color: black;
+    align-items: center;
+    justify-content: space-between;
+}
+.downbar-column1
+    {
+  display: inline-block;
+  width: 70px;
+  height: 80px;
+  align-content: center;
+}
+.song-picture{
+    width: 60px;
+    height: 60px;
+    object-fit:cover;
+}
+.downbar-column2{
+    width: 100px;
+    height: 80px;
+    display: inline-block;
+ 
+   vertical-align:middle;
+}
+.downbar-column2 p{
+    margin: 0;
+    color: white;
+   text-align: start;
+vertical-align: middle;
+}
+.downbar-column2 .Artist{
+    
+    color: rgb(188, 188, 188);
+}
+.addto-playlist{
+    display: inline-block;
+   vertical-align: top;
+   margin-top: 30px;
+}
+.downbar-middle{
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10px;
+}
+.playing{
+    height: 80px;
+}
+.progress-bar{
+    height: 4px;
+    width: 626px;
+    background-color: rgba(255, 255, 255, 0.3);
+    vertical-align: bottom;
+}
+.progress{
+    height: 4px;
+    width: 25%;
+    background-color: white;
+}
+.shuffel-button,
+.repeat-button{
+    background-color: transparent;
+    border: none;
+}
+.play-button{
+    height: 32px;
+    width: 32px;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    border: none;
+    align-items: center;
+}
+.play-buttons button:hover{
+   transform: scale(1.2);
+}
+.next-button:hover{
+  transform: scaleX(-1); 
+   transform: scale(1.2);
+    
+}
+.next-button{
+    transform: scaleX(-1);
+    background-color: transparent;
+    border: none;
+}
+.play-buttons{
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+
+.sound-function{
+    display: flex;
+    column-gap: 9px;
+    align-items: center;
+}
+.sound-function button{
+height: 20px;
+width: 20px;
+}
+.volume{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3) ;
+    color: white;
+}
+.volume::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #1DB954;
+}

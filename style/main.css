@@ -1,0 +1,112 @@
+.section-album{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap: none;
+}
+.cover{
+     display: grid;
+     row-gap: 4px;
+     grid-template-rows: 1fr 1fr;
+width: 177px;
+height: 267px;
+padding: 12px 1px 1px 17px;
+border-radius: 5px;
+vertical-align:middle ;
+}
+.cover:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.song-cover{
+    position: relative;
+}
+.cover:hover .cover-button-play{
+    opacity: 1;
+    
+    
+}
+.cover-button-play{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    align-items: center;
+    bottom: 15px;
+    right:32px;
+    background-color: rgb(15, 224, 15);
+    opacity: 0;
+    transition: opacity 0.05s;
+        
+        
+    }
+
+.cover img{
+    width: 160px;
+    height: 175px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow:rgb(199, 228, 238);
+     box-shadow: 0 0 5px rgb(0,0,0,3);
+   
+}
+.artists-cover img{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.song-title .song-name{
+margin: 0;
+font-size: 19px;
+font-family: arial;
+font-weight: 400;
+color:white;
+margin-bottom: 3px;
+text-wrap: break-word;
+}
+.song-title .singer-name{
+    margin: 0;
+    font-size: 16px;
+    font-family: arial;
+    color: white;
+    text-wrap: break-word;
+    }
+    .section-title{
+        display: flex;
+        height: 50px;
+        justify-content: space-between;
+        align-items: center;
+       color: white;
+    }
+    .section-name:hover,
+    .show-all:hover{
+        text-decoration: underline;
+    }
+    .section-name{
+        font-family: arial;
+        font-size: 25px;
+    }
+    .show-all{
+        font-family: arial;
+        font-size:15px;
+    } 
+    .artists-cover{
+        position: relative;
+    }
+    .artist-button-play{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: none;
+        align-items: center;
+        background-color: rgb(15, 224, 15);
+        bottom: 15px;
+        right:42px;
+        opacity: 0;
+      
+    }
+    .cover:hover .artist-button-play{
+        opacity: 1;
+    }
+    

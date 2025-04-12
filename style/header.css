@@ -1,0 +1,157 @@
+.header-2{
+    z-index: 900;
+    display: flex;
+    position: fixed;
+    right: 0;
+    top: 60px;
+    left: 430px;
+    height: 60px;
+    background-color: rgb(36, 38, 39);
+    align-items: center;
+    padding-left: 50px;
+}
+.header-2 button{
+height: 30px;
+border-radius: 20px;
+border: none;
+padding: 5px 8px 5px 8px;
+font-size: 15px;
+margin-right: 4px;
+}
+.header-1{
+    z-index: 1000;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
+    height: 60px;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 10px;
+    
+}
+.button-notification,
+.button-explore,
+.button-install
+{
+    height: 32px;
+    border: none;
+}
+.button-notification{
+    background-color: transparent;
+}
+.header-1 .button-notification img{
+   width: 25px;
+
+
+}
+.header-right{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    column-gap: 15px;
+}
+.header-right button:hover{
+   font-size: 15px;
+}
+.button-explore{
+    width: 150px;
+    border-radius: 20px;
+    font-weight: 780;
+    background-color: white;
+    
+}
+.button-install{
+    font-size: 15px;
+    font-weight: bold;
+    background-color: transparent;
+    color: rgb(211, 192, 192);
+}
+.button-mypf{
+   border-radius: 50%;
+   height:45px;
+   width: 45px;
+   border: none;
+   align-items: center;
+  vertical-align: middle;
+  background-color:rgb(141, 133, 133) ;
+}
+.button-mypf img{
+border-radius: 50%;
+height: 34px;
+width: 34px;
+vertical-align: middle;
+object-fit: cover;
+}
+.button-mypf img:hover{
+    transform: scale(1.1);
+}
+.header-middle{
+    display: flex;
+    align-items: center;
+    margin-left: 300px;
+}
+.header-middle button{
+    
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+}
+.button-home{
+    align-content: center;
+}
+.button-home:focus{
+    outline: none;
+    border: none;
+}
+.button-add  {
+    color: white;
+    font-size: 30px;
+    font-weight: 100;
+    text-align: middle;
+}
+.header-middle input{
+    width: 400px;
+    height: 45px;
+    border: none;
+   
+}
+ .search-bar::placeholder{
+    font-family: roboto,arial;
+    font-size: 16px ;
+    font-weight:400;
+}
+.search-bar:focus{
+    outline: none;
+    border: none;
+}
+.button-search{
+    margin-right: -3px;
+    border-radius: 0px !important;
+    border-top-left-radius: 25px !important;
+    border-bottom-left-radius: 25px !important;
+    margin-left: 10px;
+}
+.button-search img{
+    stroke: white;
+    
+}
+
+.button-layer{
+    margin-left: -3px;
+    border-radius: 0px !important;
+    border-top-right-radius: 25px !important;
+    border-bottom-right-radius: 25px !important;
+    margin-right: 10px;
+}
+.button-home,
+.button-search,
+.search-bar,
+.button-layer,
+.button-add{
+    background-color: #1f1f1f;
+}

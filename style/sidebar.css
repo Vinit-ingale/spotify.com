@@ -1,0 +1,139 @@
+.sidebar{
+   z-index: 999;
+    background-color: rgb(18, 18, 18);
+    display: flex;
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    width: 410px;
+    padding-left: 20px;
+    border-top-right-radius: 10px;
+    border-right: 1px;
+    border-right-style: solid;
+}
+.library{
+    display:flex;
+    justify-content:space-between ;
+    width: 400px;
+    height: 60px;
+    align-items: center;
+}
+.button-inst button{
+height: 32px;
+width: 32px;
+border-radius: 50%;
+background-color: transparent;
+color: rgb(188, 188, 188);
+border: none;
+font-size: 25px;
+margin-right: 15px;
+}
+.button-library{
+    width: 120px;
+    font-size:17px;
+    background-color: transparent;
+color: rgb(188, 188, 188);
+border: none;
+font-weight: 600;
+}
+.button-category{
+margin-top: 10px;
+}
+.button-category button{
+height: 32px;
+font-size: 14.35px;
+background-color: rgba(255, 255, 255, 0.1);
+color: white;
+border: none;
+border-radius: 15px;
+padding:4px 12px 4px 12px  ;
+}
+.sidebar-upper{
+    height: 110px;
+}
+.playlist-privew button img{
+    width: 48px;
+    height:48px;
+    border-radius: 50%;
+}
+.sidebar-pf{
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 5px;
+    object-fit: cover;
+  }
+  .colum1{
+    display: inline-block;
+    width: 48px;
+    margin-right: 10px;
+  }
+  .colum2{
+    display: inline-block;
+    
+    vertical-align: top;
+  }
+  .colum2 p{
+     margin: 0;
+     margin-bottom: 7px;
+     font-family: arial;
+  }
+  .artist-name{
+    color: white;
+   margin-bottom: 5px;
+   font-size: 16px;
+  }
+  .sidebar-playlist{
+    height: 64px;
+    border-radius: 10px;
+    align-content: center;
+    color:rgb(188, 188, 188); 
+    font-size: 13px;
+    padding-left: 5px;
+  }
+  .sidebar-playlist:hover{
+    background-color:rgba(255, 255, 255, 0.1) ;
+  }
+ .sidebar-searchbar{
+   display: flex;
+   height: 50px;
+   align-items:center ;
+ }
+ .sidebar-button-search{
+    background-color: transparent;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+ }
+ .sidebar-button-search:hover{
+    background-color:  rgba(255, 255, 255, 0.1);
+ }
+ .sidebar-searchbar{
+  display: flex;
+  justify-content: space-between;
+    margin-top: 5px;
+ }
+ .button-recent{
+  height: 32px;
+  width: 100px;
+  background-color: transparent;
+  color: rgb(188, 188, 188);
+  border: none;
+
+ }
+
+ .button-recent p{
+  display: inline-block;
+  margin: 0;
+  vertical-align: top;
+ }
+ .button-recent:hover,
+ .button-recent svg:hover{
+  font-size: 15px ;
+  color: white;
+  fill: white;
+  
+ }
