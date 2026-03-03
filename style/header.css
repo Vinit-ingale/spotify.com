@@ -40,6 +40,7 @@ margin-right: 4px;
     height: 32px;
     border: none;
 }
+
 .button-notification{
     background-color: transparent;
 }
@@ -69,6 +70,12 @@ margin-right: 4px;
     font-weight: bold;
     background-color: transparent;
     color: rgb(211, 192, 192);
+}
+.button-install:hover{
+    background-color: white;
+    border-radius: 20px;
+    transition: 0.1s;
+    color: black;
 }
 .button-mypf{
    border-radius: 50%;
@@ -124,10 +131,14 @@ object-fit: cover;
     font-family: roboto,arial;
     font-size: 16px ;
     font-weight:400;
+    
 }
 .search-bar:focus{
     outline: none;
     border: none;
+}
+.search-bar{
+    color: white;
 }
 .button-search{
     margin-right: -3px;
@@ -135,11 +146,14 @@ object-fit: cover;
     border-top-left-radius: 25px !important;
     border-bottom-left-radius: 25px !important;
     margin-left: 10px;
+   
 }
 .button-search img{
     stroke: white;
     
 }
+
+ 
 
 .button-layer{
     margin-left: -3px;

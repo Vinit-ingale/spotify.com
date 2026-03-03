@@ -1,7 +1,17 @@
 .section-album{
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
     column-gap: none;
+}
+@media (max-width:1400px){
+    .section-album{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+ @media (max-width:810px){
+    .section-album{
+        grid-template-columns: 1fr 1fr 1fr ;
+    }
 }
 .cover{
      display: grid;
@@ -55,7 +65,7 @@ vertical-align:middle ;
     border-radius: 50%;
     vertical-align: middle;
 }
-.song-title .song-name{
+.song-title .song-name, .top-artist-name{
 margin: 0;
 font-size: 19px;
 font-family: arial;
@@ -64,7 +74,7 @@ color:white;
 margin-bottom: 3px;
 text-wrap: break-word;
 }
-.song-title .singer-name{
+.song-title .singer-name, .title {
     margin: 0;
     font-size: 16px;
     font-family: arial;
@@ -109,4 +119,5 @@ text-wrap: break-word;
     .cover:hover .artist-button-play{
         opacity: 1;
     }
+   
     
