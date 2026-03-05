@@ -80,12 +80,13 @@ padding:4px 12px 4px 12px  ;
      margin-bottom: 7px;
      font-family: arial;
   }
-  .artist-name{
+  .artist-name {
     color: white;
    margin-bottom: 5px;
    font-size: 16px;
   }
-  .sidebar-playlist{
+  
+  .sidebar-playlist,a{
     display: inline-block;
     height: 64px;
     border-radius: 10px;

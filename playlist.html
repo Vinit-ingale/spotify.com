@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anime Your Music</title>
+  <link rel="stylesheet" href="style/playlist.css" />
+   <link rel="stylesheet" href="style/downbar.css" />
+</head>
+<body>
+
+  <div class="hero">
+    <div class="hero-overlay">
+      <h1>Anime your Music</h1>
+      <p class="listeners">20,742 monthly listeners</p>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <div class="controls">
+      <button class="play-btn">▶</button>
+      <button class="follow-btn">Following</button>
+      <button class="more-btn">•••</button>
+    </div>
+
+    <h2>Popular</h2>
+
+    <div class="song-list js-playlist-song-list">
+    </div>
+
+  </div>
+
+  <div class="downbar js-downbar">
+      <div class="playing js-playing">
+            
+          </div>
+            
+
+          <div class="downbar-middle">
+            <div class="play-buttons">
+                <button class="shuffel-button"><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="21"
+                    viewBox="0 0 21 21"
+                    fill="rgba(255, 255, 255, 0.3)"
+                    stroke="rgba(255, 255, 255, 0.3)"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <polyline points="16 3 21 3 21 8"></polyline>
+                    <line x1="4" y1="20" x2="21" y2="3"></line>
+                    <polyline points="21 16 21 21 16 21"></polyline>
+                    <line x1="15" y1="15" x2="21" y2="21"></line>
+                    <line x1="4" y1="4" x2="9" y2="9"></line>
+                </svg>
+                </button>
+                <button class="shuffel-button"><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="rgba(255, 255, 255, 0.3)"
+                    stroke="none"
+                >
+                    <polygon points="18 20 6 12 18 4"></polygon>
+                    <rect x="4" y="4" width="2" height="16"></rect>
+                </svg>
+                </button>
+                <button class="play-button"><span style="width: 16px;
+                height: 16px">&#9654</span>
+                </button>
+                <button class="next-button">
+                    <img src="icons/next-button.png">
+                </button>
+                <button class="repeat-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(255, 255, 255, 0.3)">
+                        <path d="M7 4h10a4 4 0 0 1 4 4v1a1 1 0 1 1-2 0V8a2 2 0 0 0-2-2H7v2.5a1 1 0 0 1-1.707.707L2.707 6.207a1 1 0 0 1 0-1.414L5.293 2.207A1 1 0 0 1 7 3v1Zm10 16H7a4 4 0 0 1-4-4v-1a1 1 0 1 1 2 0v1a2 2 0 0 0 2 2h10v-2.5a1 1 0 0 1 1.707-.707l2.586 2.586a1 1 0 0 1 0 1.414l-2.586 2.586A1 1 0 0 1 17 21v-1Z"/>
+                      </svg>
+                      
+                </button>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress" ></div>
+              </div>
+          </div>
+
+          <div class="sound-function">
+            <button>
+    
+            </button>
+            <input class="volume" type="range">
+              <button></button>
+              
+          </div>
+
+   </div>
+  
+
+  <script type="module" src="script/playlist.js"></script>
+</body>
+</html>

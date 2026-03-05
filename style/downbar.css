@@ -23,11 +23,13 @@
     object-fit:cover;
 }
 .downbar-column2{
+    
     width: 100px;
     height: 80px;
     display: inline-block;
- 
+    word-wrap: normal;
    vertical-align:middle;
+   text-align: center;
 }
 .downbar-column2 p{
     margin: 0;
@@ -53,6 +55,9 @@ vertical-align: middle;
 }
 .playing{
     height: 80px;
+    display: flex;
+   justify-content: center;
+   justify-items: center;
 }
 .progress-bar{
     height: 4px;
