@@ -1,10 +1,13 @@
-import { playlist } from "./data/backend.js";  
+import { playlist,playlistSavetoStorage ,playlistloadFromStrorage} from "./data/cartPlaylist.js";  
 import { renderPlaylist } from "./playlist.js";
 import { getplaylist} from "./data/backend.js";
 
 let playlistHTML='';
+playlistloadFromStrorage()
 
 playlist.forEach((playlist)=>{
+
+  if(playlist.followed===true){
   playlistHTML+=`
          
         <div class="sidebar-playlist  " data-playlist-id="${playlist.id}"> 
@@ -16,7 +19,7 @@ playlist.forEach((playlist)=>{
         </div>
         
       
-  `
+    `}
 })
 
 document.querySelector('.js-sidebar-playlist').innerHTML=playlistHTML;
@@ -28,3 +31,6 @@ document.querySelectorAll('.sidebar-playlist').forEach((playlist)=>{
    
     
 })})
+ 
+
+playlistSavetoStorage()

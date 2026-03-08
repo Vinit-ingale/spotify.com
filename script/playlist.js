@@ -1,10 +1,14 @@
-import { playlist,getplaylist,getPlaylistSong,loadDownbar } from "./data/backend.js";
+import {getplaylist,loadDownbar } from "./data/backend.js";
+import { playlist, getPlaylistSong,playlistSavetoStorage, playlistloadFromStrorage,toggleButton} from "./data/cartPlaylist.js";
 
+ playlistloadFromStrorage()
 
 export async function renderPlaylist(){
+
  const container = document.querySelector('.js-playlist-song-list');
  const playlistId = JSON.parse(localStorage.getItem('playlistId'));
   let songData =  getplaylist(playlist,playlistId)
+  console.log(songData)
  
   let playlistSongHTML='';
     
@@ -40,17 +44,49 @@ button.addEventListener('click',()=>{
   
   let song=getPlaylistSong(songData,songId)
  
-   localStorage.setItem('song',JSON.stringify(song))
+ localStorage.setItem('song',JSON.stringify(song))
   loadDownbar(song)
    
-  
 })
 })
+
+followButton(playlistId)
+playlistSavetoStorage()
 
 }
 document.addEventListener("DOMContentLoaded", () => {
   renderPlaylist();
 });
+
+function followButton(playlistId){
+  const followbutton = document.querySelector('.js-follow-btn')
+  const playlistData=playlist.find(p=> p.id==playlistId);
+
+    if(playlistData.followed){
+      followbutton.innerText='Following'
+    }else {
+      followbutton.innerText='Follow'
+    }
+
+
+   followbutton.addEventListener('click',()=>{
+
+    toggleButton(playlistId)
+  if(followbutton.innerText === 'Follow'){
+      followbutton.innerText = 'Following'
+      
+  }
+  else {
+      followbutton.innerText = 'Follow'
+     
+      
+      
+  }
+    
+
+})
+}
+
 
 
 

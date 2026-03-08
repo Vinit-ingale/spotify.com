@@ -67,7 +67,7 @@ body {
   transform: scale(1.05);
 }
 
-.follow-btn {
+.is-following{
   padding: 8px 18px;
   border-radius: 20px;
   border: 1px solid #aaa;
@@ -75,6 +75,7 @@ body {
   color: white;
   cursor: pointer;
 }
+
 
 .more-btn {
   background: none;

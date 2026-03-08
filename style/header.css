@@ -10,6 +10,16 @@
     align-items: center;
     padding-left: 50px;
 }
+@media (max-width:1400px) {
+  .header-2{
+    left: 220px;
+  }
+}
+@media (max-width:720px) {
+  .header-2{
+    left: 0px;
+  }
+}
 .header-2 button{
 height: 30px;
 border-radius: 20px;

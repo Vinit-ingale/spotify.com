@@ -1,44 +1,44 @@
 export const data=[{
     id:'1',
-    name:"hello",
+    name:"Blinding Lights",
     img:"imges/dog.jpg",
     singer:"Hemesh Rashamiya",
     keyword:"recommended"
 },{
     id:'2',
-    name:"hi",
+    name:"Shape of You",
     img:"imges/cat.jpg",
-    singer:"Hemesh Rashamiya",
+    singer:"The Weeknd",
     keyword:"recommended"
 },{
     id:'3',
-    name:"Sanam tere kisam",
+    name:"Kesariya",
     img:"imges/cat.jpg",
-    singer:"Hemesh Rashamiya",
+    singer:"Arijit Singh",
     keyword:"recommended"
 },{
     id:'4',
-    name:"Sanam tere kisam",
+    name:"Believer",
     img:"imges/cat.jpg",
-    singer:"Hemesh Rashamiya",
+    singer:"Imagine Dragons",
     keyword:"recommended"
 },{
     id:'5',
-    name:"Sanam tere kisam",
+    name:"Tum Hi Ho",
     img:"imges/cat.jpg",
-    singer:"Hemesh Rashamiya",
+    singer:"Arijit Singh",
     keyword:"recommended"
 },{
     id:'6',
-    name:"Sanam tere kisam",
+    name:"On My Way",
     img:"imges/cat.jpg",
-    singer:"Hemesh Rashamiya",
+    singer:"Alan Walker",
     keyword:"recommended"
 },{
     id:'7',
-    name:"Sanam tere kisam",
+    name:"Perfect",
     img:"imges/cat.jpg",
-    singer:"Hemesh Rashamiya",
+    singer:"Ed Sheeran",
     keyword:"recommended"
 },
 ]
@@ -72,64 +72,9 @@ export const artist =[{
     img:"imges/cat.jpg",
     keyword:"top-artist"
 }
-
 ]
 
-export const playlist=[{
-    id:'1',
-    name:"anime ",
-    img:"imges/dog.jpg",
-    source:"myPlaylist",
-    songs:[{
-          id:'12',
-    name:"anime ",
-    img:"imges/dog.jpg",
-    plays:"123455",
-    duration:"1:14",
-    singer:"Hemesh Rashamiya"
-    },{
-          id:'23',
-    name:"anime ",
-    img:"imges/dog.jpg",
-    plays:"123455",
-    duration:"1:14",
-    singer:"Hemesh Rashamiya"
-    },{
-          id:'34',
-    name:"anime ",
-    img:"imges/dog.jpg",
-    plays:"123455",
-    duration:"1:14",
-    singer:"Hemesh Rashamiya"
-    },{
-          id:'45',
-    name:"anime ",
-    img:"imges/dog.jpg",
-    plays:"123455",
-    duration:"1:14",
-    singer:"Hemesh Rashamiya"
-    }]
-},{ 
-    id:'2',
-    name:"anime songs",
-    img:"imges/dog.jpg",
-    source:"myPlaylist"
-},{ 
-    id:'3',
-    name:"anime songs",
-    img:"imges/dog.jpg",
-    source:"myPlaylist"
-},{
-    id:'4',
-    name:"anime songs",
-    img:"imges/dog.jpg",
-    source:"myPlaylist"
-},{
-    id:'5',
-    name:"anime songs",
-    img:"imges/dog.jpg",
-    source:"myPlaylist"
-},]
+
 
 
 export function getplaylist(dataList,songId){
@@ -144,23 +89,13 @@ export function getplaylist(dataList,songId){
   
 }
 
-export function getPlaylistSong(songData,songId){
-    let matchingsong;
-
-    songData.songs.forEach((song)=>{
-        if(song.id === songId)
-            matchingsong=song
-    })
-    return matchingsong
-}
-
 
 export function loadDownbar(song){
         document.querySelector('.js-playing').innerHTML=`
-           <div class="downbar-column1"><img class="song-picture" src=${song.img}></div>
+           <div class="downbar-column1" ><img class="song-picture" src=${song.img}></div>
             <div class="downbar-column2"><p  class="music-name">${song.name}</p>
                  <p class="Artist">${song.singer}</p></div>
-                 <div class="addto-playlist"><button>+</button></div>
+                 <div class="addto-playlist js-addto-playlist" data-song-id="${song.id}"><button>+</button></div>
         `
         }
 

@@ -4,6 +4,17 @@ body{
     background-color:  rgb(18, 18, 18);
     overflow-x: hidden;
 }
+@media (max-width:1400px) {
+  body{
+    padding-left: 220px;
+  }
+}
+@media (max-width:720px) {
+  body{
+    padding-left: 0px;
+  }
+}
+
 p{
     font-family: arial;
 }
