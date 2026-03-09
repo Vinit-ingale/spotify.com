@@ -1,5 +1,6 @@
 import { data,artist,getplaylist,loadDownbar } from "./data/backend.js";
 import { playlist, playlistSavetoStorage,playlistloadFromStrorage } from "./data/cartPlaylist.js";
+import { renderPlaying } from "./downbar/playing.js";
 
 
 playlistloadFromStrorage()
@@ -57,19 +58,12 @@ document.querySelectorAll('.js-cover-button-play').forEach((button)=>{
     })
 })
 
-function addSongtoPlaylist(){
-  const addButton=document.querySelector('.js-addto-playlist')
-  addButton.addEventListener('click',()=>{
-    const songId=addButton.dataset.songId;
-    const addSong=getplaylist(data,songId)
-    
-    
-  })
-}
 
-addSongtoPlaylist()
+
+
  playlistSavetoStorage()
 console.log(playlist)
+renderPlaying(song)
 
 
 

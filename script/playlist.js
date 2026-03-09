@@ -1,5 +1,6 @@
-import {getplaylist,loadDownbar } from "./data/backend.js";
+import {getplaylist,loadDownbar ,data} from "./data/backend.js";
 import { playlist, getPlaylistSong,playlistSavetoStorage, playlistloadFromStrorage,toggleButton} from "./data/cartPlaylist.js";
+import { renderPlaying } from "./downbar/playing.js";
 
  playlistloadFromStrorage()
 
@@ -26,10 +27,6 @@ export async function renderPlaylist(){
       `
   })
   
- 
-
-   
- 
 document.querySelector('.js-playlist-song-list').innerHTML=playlistSongHTML;
 
 let song=JSON.parse(localStorage.getItem('song'))
@@ -51,7 +48,9 @@ button.addEventListener('click',()=>{
 })
 
 followButton(playlistId)
+renderPlaying(song)
 playlistSavetoStorage()
+
 
 }
 document.addEventListener("DOMContentLoaded", () => {
@@ -78,14 +77,12 @@ function followButton(playlistId){
   }
   else {
       followbutton.innerText = 'Follow'
-     
-      
-      
   }
     
 
 })
 }
+
 
 
 

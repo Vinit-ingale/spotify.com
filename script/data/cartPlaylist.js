@@ -210,22 +210,7 @@ export function removePlaylist(playlistId){
 
 }
 
-export function addPlaylist(playlistId,tempPlaylist){
-    const newPlaylist=[];
 
-    tempPlaylist.forEach((playlist)=>{
-      if(playlist.id===playlistId){
-         newPlaylist=tempPlaylist;
-         playlist=newPlaylist;
-       
-      }else{
-          console.log('not in playlist')
-           
-      }
-       
-    })
-
-}
 
 export function toggleButton(playlistId){
       playlist.forEach((playlist)=>{
@@ -233,6 +218,18 @@ export function toggleButton(playlistId){
             playlist.followed=!playlist.followed
          }
       })
+      playlistSavetoStorage()
+}
+
+export function addSongToP(playlistData,addSong){
+      const avl=playlistData.songs.find(p=> p.id === addSong.id)
+      if (avl){
+            console.log('already exsists')
+            return
+      }else {
+            playlistData.songs.push(addSong)
+      }
+
       playlistSavetoStorage()
 }
 
