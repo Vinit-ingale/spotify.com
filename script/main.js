@@ -1,4 +1,4 @@
-import { data,artist,getplaylist,loadDownbar } from "./data/backend.js";
+import { data,getplaylist,loadDownbar } from "./data/backend.js";
 import { playlist, playlistSavetoStorage,playlistloadFromStrorage } from "./data/cartPlaylist.js";
 import { renderPlaying } from "./downbar/playing.js";
 
@@ -7,6 +7,7 @@ playlistloadFromStrorage()
 let songHTML='';
 
 data.forEach((song) => {
+    if(song.keyword==="recommended")
     songHTML+=`
       <div class="cover">
                 <div class="song-cover"><img src=${song.img}>
@@ -22,7 +23,8 @@ document.querySelector('.js-section-album').innerHTML=songHTML
 
 let TopartistHTML='';
 
-artist.forEach((artist)=>{
+data.forEach((artist)=>{
+   if(artist.keyword==="top-artist") 
    TopartistHTML+=`
    <div class="cover">
                      <div class="artists-cover"><img src="imges/cat.jpg">
@@ -63,7 +65,7 @@ document.querySelectorAll('.js-cover-button-play').forEach((button)=>{
 
  playlistSavetoStorage()
 console.log(playlist)
-renderPlaying(song)
+renderPlaying(song,data)
 
 
 

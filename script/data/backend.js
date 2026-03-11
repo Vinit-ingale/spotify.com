@@ -3,50 +3,76 @@ export const data=[{
     name:"Blinding Lights",
     img:"imges/dog.jpg",
     singer:"Hemesh Rashamiya",
-    keyword:"recommended"
+    keyword:"recommended",
+    duration:"4.15",
+    plays:"123456",
+     audio:"audio/Edsheeran_Shape_Of_You.mp3"
 },{
     id:'2',
     name:"Shape of You",
     img:"imges/cat.jpg",
     singer:"The Weeknd",
-    keyword:"recommended"
+    keyword:"recommended",
+    duration:"4.15",
+    plays:"123456",
+    audio:"audio/Edsheeran_Shape_Of_You.mp3"
 },{
     id:'3',
     name:"Kesariya",
     img:"imges/cat.jpg",
     singer:"Arijit Singh",
-    keyword:"recommended"
+    keyword:"recommended",
+    duration:"4.15",
+    plays:"123456",
+     audio:"audio/Edsheeran_Shape_Of_You.mp3"
 },{
     id:'4',
     name:"Believer",
     img:"imges/cat.jpg",
     singer:"Imagine Dragons",
-    keyword:"recommended"
+    keyword:"recommended",
+    duration:"4.15",
+    plays:"123456",
+     audio:"audio/Edsheeran_Shape_Of_You.mp3"
 },{
     id:'5',
     name:"Tum Hi Ho",
     img:"imges/cat.jpg",
     singer:"Arijit Singh",
-    keyword:"recommended"
+    keyword:"recommended",
+    duration:"4.15",
+    plays:"123456",
+     audio:"audio/Edsheeran_Shape_Of_You.mp3"
 },{
     id:'6',
     name:"On My Way",
     img:"imges/cat.jpg",
     singer:"Alan Walker",
-    keyword:"recommended"
+    keyword:"recommended",
+    duration:"4.15",
+    plays:"123456",
+     audio:"audio/Edsheeran_Shape_Of_You.mp3"
 },{
     id:'7',
     name:"Perfect",
     img:"imges/cat.jpg",
     singer:"Ed Sheeran",
-    keyword:"recommended"
-},
-]
-
-export const artist =[{
+    keyword:"recommended",
+    duration:"4.15",
+    plays:"123456",
+     audio:"audio/Edsheeran_Shape_Of_You.mp3"
+},{
     name:"Hemesh Rashamiya",
     img:"imges/cat.jpg",
-    keyword:"top-artist"
+    keyword:"top-artist",
+    songs:[{
+        id:'artist-11',
+        name:"happy place",
+        img:"imges/cat.jpg",
+        singer:"Hemesh Rashamiya",
+        duration:"4.15",
+        plays:"123456"
+    }]
 },{
     name:"Hemesh Rashamiya",
     img:"imges/cat.jpg",
@@ -73,8 +99,6 @@ export const artist =[{
     keyword:"top-artist"
 }
 ]
-
-
 
 
 export function getplaylist(dataList,songId){

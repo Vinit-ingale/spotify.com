@@ -1,9 +1,17 @@
-import { getplaylist,data } from "../data/backend.js";
+import { getplaylist,data ,loadDownbar} from "../data/backend.js";
 import { playlist , addSongToP} from "../data/cartPlaylist.js";
 
 
 
-export function renderPlaying(song){
+export function renderPlaying(song , datalist){
+
+    const  audio=document.querySelector('.audio');
+    const playBtn=document.querySelector('.js-play-button');
+    const nextBtn=document.querySelector('.js-next-button');
+    const prevBtn=document.querySelector('.js-prev-button');
+
+    let currentSong=datalist.findIndex(s=> s.id===song.id);
+    let isPlaying=false;
 
 function addSongtoPlaylist(){
     const popup = document.querySelector('.js-popup');
@@ -57,7 +65,60 @@ function renderPopup(addSong,popup){
         })
     })
 }
- 
+ loadSong(song)
+function loadSong(song){
+    audio.src=song.audio
+}
 
+playBtn.addEventListener('click',()=>{
+    if (isPlaying){
+        audio.pause()
+        playBtn.innerHTML="▶"
+
+    }else {
+        audio.play()
+        playBtn.innerHTML="⏸"
+    }
+    isPlaying=!isPlaying
+});
+
+nextBtn.addEventListener('click',()=>{
+    currentSong++;
+
+    if(currentSong >= datalist.length){
+        currentSong = 0;
+    }
+
+    loadSong(datalist[currentSong]);
+    audio.play();
+    playBtn.innerHTML="⏸";
+    isPlaying = true;
+    updateDownbar(datalist[currentSong])
+})
+
+prevBtn.addEventListener('click',()=>{
+     currentSong--;
+
+    if(currentSong<0){
+        currentSong=datalist.length-1
+    }
+
+    loadSong(datalist[currentSong])
+    audio.play();
+    playBtn.innerHTML="⏸";
+    isPlaying=true;
+    updateDownbar(datalist[currentSong])
+});
+
+function updateDownbar(song){
+    document.querySelector('.song-picture').src=song.img;
+    document.querySelector('.music-name').textContent=song.name;
+    document.querySelector('.Artist').textContent=song.singer;
+    document.querySelector('.js-addto-playlist').dataset.songId=song.id;
+    localStorage.setItem('song',JSON.stringify(song))
+    if(song){
+      loadDownbar(song)
+    }
+}
 }
 

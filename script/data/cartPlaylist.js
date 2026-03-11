@@ -14,28 +14,32 @@ export function playlistloadFromStrorage (){
     img:"imges/dog.jpg",
     plays:"123455",
     duration:"1:14",
-    singer:"Hemesh Rashamiya"
+    singer:"Hemesh Rashamiya",
+     audio:"audio/Edsheeran_Shape_Of_You.mp3"
     },{
           id:'12',
     name:"anime ",
     img:"imges/dog.jpg",
     plays:"123455",
     duration:"1:14",
-    singer:"Hemesh Rashamiya"
+    singer:"Hemesh Rashamiya",
+     audio:"audio/Edsheeran_Shape_Of_You.mp3"
     },{
           id:'13',
     name:"anime ",
     img:"imges/dog.jpg",
     plays:"123455",
     duration:"1:14",
-    singer:"Hemesh Rashamiya"
+    singer:"Hemesh Rashamiya",
+     audio:"audio/Edsheeran_Shape_Of_You.mp3"
     },{
           id:'14',
     name:"anime ",
     img:"imges/dog.jpg",
     plays:"123455",
     duration:"1:14",
-    singer:"Hemesh Rashamiya"
+    singer:"Hemesh Rashamiya",
+     audio:"audio/Edsheeran_Shape_Of_You.mp3"
     }]
 },{ 
     id:'2',

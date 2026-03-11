@@ -48,7 +48,7 @@ button.addEventListener('click',()=>{
 })
 
 followButton(playlistId)
-renderPlaying(song)
+renderPlaying(song,songData.songs)
 playlistSavetoStorage()
 
 
