@@ -88,7 +88,6 @@ playBtn.addEventListener('click',()=>{
         const progressPercent = (currentTime / duration) * 100;
         progress.style.width = progressPercent + "%";
         songcurrentTime.innerHTML=formatTime(audio.currentTime);
-        console.log(songcurrentTime)
         document.querySelector('.js-duration').innerHTML=formatTime(audio.duration)
         });
         progressContainer.addEventListener('click',(e)=>{
