@@ -16,7 +16,7 @@ export function renderPlaying(song , datalist){
 function addSongtoPlaylist(){
     const popup = document.querySelector('.js-popup');
   const addButton=document.querySelector('.js-addto-playlist')
-  addButton.addEventListener('click',(event)=>{
+  addButton.onclick=(event)=>{
     const songId=addButton.dataset.songId;
     const addSong=song
     
@@ -24,7 +24,7 @@ function addSongtoPlaylist(){
      const y = event.clientY;
 
     popup.style.left = x +10+ 'px';
-    popup.style.top = y-350 + 'px';
+   popup.style.top = Math.max(20, y - 350) + 'px';
     popup.style.display="block"
     
     renderPopup(addSong,popup);
@@ -32,7 +32,7 @@ function addSongtoPlaylist(){
       popup.style.display="none"
   })
 
-  })
+  }
   
 }
 addSongtoPlaylist()
@@ -65,6 +65,8 @@ function renderPopup(addSong,popup){
         })
     })
 }
+
+
  loadSong(song)
 function loadSong(song){
     audio.src=song.audio
@@ -81,9 +83,31 @@ playBtn.addEventListener('click',()=>{
     }
     isPlaying=!isPlaying
 });
+  audio.addEventListener('timeupdate', () => {
+        const {duration,currentTime} = audio;
+        const progressPercent = (currentTime / duration) * 100;
+        progress.style.width = progressPercent + "%";
+        songcurrentTime.innerHTML=formatTime(audio.currentTime);
+        console.log(songcurrentTime)
+        document.querySelector('.js-duration').innerHTML=formatTime(audio.duration)
+        });
+        progressContainer.addEventListener('click',(e)=>{
+            const width = progressContainer.clientWidth;
+            const clickX = e.offsetX;
+            const duration = audio.duration;
+            audio.currentTime = (clickX / width) * duration;
+         });
+
+         function formatTime(time){
+            const minutes = Math.floor(time / 60);
+            const seconds = Math.floor(time % 60);
+
+            return `${String(minutes).padStart(2,'0')}:${String(seconds).padStart(2,'0')}`;
+          }
+
 
 nextBtn.addEventListener('click',()=>{
-    currentSong++;
+      currentSong++;
 
     if(currentSong >= datalist.length){
         currentSong = 0;
@@ -94,6 +118,7 @@ nextBtn.addEventListener('click',()=>{
     playBtn.innerHTML="⏸";
     isPlaying = true;
     updateDownbar(datalist[currentSong])
+    
 })
 
 prevBtn.addEventListener('click',()=>{
@@ -121,4 +146,10 @@ function updateDownbar(song){
     }
 }
 }
+
+const progress = document.querySelector('.js-progress');
+const progressContainer = document.querySelector('.js-progress-container');
+let songcurrentTime=document.querySelector('.js-current-time')
+
+
 

@@ -59,6 +59,13 @@ vertical-align: middle;
    justify-content: center;
    justify-items: center;
 }
+.progress-container{
+    color: white;
+display:flex;
+align-items:center;
+gap:10px;
+width:100%;
+}
 .progress-bar{
     height: 4px;
     width: 626px;
@@ -67,7 +74,7 @@ vertical-align: middle;
 }
 .progress{
     height: 4px;
-    width: 25%;
+    
     background-color: white;
 }
 .shuffel-button,

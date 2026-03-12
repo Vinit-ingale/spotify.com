@@ -1,4 +1,4 @@
-import { data,getplaylist,loadDownbar } from "./data/backend.js";
+import { data,getplaylist,loadDownbar,artist } from "./data/backend.js";
 import { playlist, playlistSavetoStorage,playlistloadFromStrorage } from "./data/cartPlaylist.js";
 import { renderPlaying } from "./downbar/playing.js";
 
@@ -23,8 +23,8 @@ document.querySelector('.js-section-album').innerHTML=songHTML
 
 let TopartistHTML='';
 
-data.forEach((artist)=>{
-   if(artist.keyword==="top-artist") 
+artist.forEach((artist)=>{
+   
    TopartistHTML+=`
    <div class="cover">
                      <div class="artists-cover"><img src="imges/cat.jpg">

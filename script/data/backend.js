@@ -61,7 +61,11 @@ export const data=[{
     duration:"4.15",
     plays:"123456",
      audio:"audio/Edsheeran_Shape_Of_You.mp3"
-},{
+}
+]
+
+export const artist=[,{ 
+    id:"artist-1",
     name:"Hemesh Rashamiya",
     img:"imges/cat.jpg",
     keyword:"top-artist",
@@ -73,43 +77,44 @@ export const data=[{
         duration:"4.15",
         plays:"123456"
     }]
-},{
-    name:"Hemesh Rashamiya",
-    img:"imges/cat.jpg",
-    keyword:"top-artist"
-},{
-    name:"Hemesh Rashamiya",
-    img:"imges/cat.jpg",
-    keyword:"top-artist"
-},{
-    name:"Hemesh Rashamiya",
-    img:"imges/cat.jpg",
-    keyword:"top-artist"
-},{
-    name:"Hemesh Rashamiya",
-    img:"imges/cat.jpg",
-    keyword:"top-artist"
-},{
-    name:"Hemesh Rashamiya",
-    img:"imges/cat.jpg",
-    keyword:"top-artist"
-},{
-    name:"Hemesh Rashamiya",
-    img:"imges/cat.jpg",
-    keyword:"top-artist"
-}
+    },{
+        id:"artist-1",
+        name:"Hemesh Rashamiya",
+        img:"imges/cat.jpg",
+        keyword:"top-artist"
+    },{
+        id:"artist-2",
+        name:"Hemesh Rashamiya",
+        img:"imges/cat.jpg",
+        keyword:"top-artist"
+    },{
+        id:"artist-3",
+        name:"Hemesh Rashamiya",
+        img:"imges/cat.jpg",
+        keyword:"top-artist"
+    },{
+        id:"artist-4",
+        name:"Hemesh Rashamiya",
+        img:"imges/cat.jpg",
+        keyword:"top-artist"
+    },{
+        id:"artist-5",
+        name:"Hemesh Rashamiya",
+        img:"imges/cat.jpg",
+        keyword:"top-artist"
+    },{
+        id:"artist-6",
+        name:"Hemesh Rashamiya",
+        img:"imges/cat.jpg",
+        keyword:"top-artist"
+    }
+
 ]
 
 
 export function getplaylist(dataList,songId){
-    let matchingsong;
     
-    dataList.forEach((song)=>{
-        if(song.id === songId)
-            matchingsong=song
-       
-    })
-    return matchingsong
+    return dataList.find(song => song.id === songId);
   
 }
 
