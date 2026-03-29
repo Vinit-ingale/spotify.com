@@ -1,14 +1,14 @@
-import { playlist,playlistSavetoStorage ,playlistloadFromStrorage} from "./data/cartPlaylist.js";  
+import { playlist, playlistSavetoStorage, playlistloadFromStorage } from "./data/cartPlaylist.js";
 import { renderPlaylist } from "./playlist.js";
-import { getplaylist} from "./data/backend.js";
+import { getplaylist } from "./data/backend.js";
 
-let playlistHTML='';
-playlistloadFromStrorage()
+let playlistHTML = '';
+playlistloadFromStorage()
 
-playlist.forEach((playlist)=>{
+playlist.forEach((playlist) => {
 
-  if(playlist.followed===true){
-  playlistHTML+=`
+  if (playlist.followed === true) {
+    playlistHTML += `
          
         <div class="sidebar-playlist  " data-playlist-id="${playlist.id}"> 
           <a href="playlist.html">
@@ -22,15 +22,16 @@ playlist.forEach((playlist)=>{
     `}
 })
 
-document.querySelector('.js-sidebar-playlist').innerHTML=playlistHTML;
+document.querySelector('.js-sidebar-playlist').innerHTML = playlistHTML;
 
-document.querySelectorAll('.sidebar-playlist').forEach((playlist)=>{
-    playlist.addEventListener('click',()=>{
-    let playlistId=playlist.dataset.playlistId;
-    localStorage.setItem('playlistId',JSON.stringify(playlistId));
-   
-    
-})})
- 
+document.querySelectorAll('.sidebar-playlist').forEach((playlist) => {
+  playlist.addEventListener('click', () => {
+    let playlistId = playlist.dataset.playlistId;
+    localStorage.setItem('playlistId', JSON.stringify(playlistId));
+
+
+  })
+})
+
 
 playlistSavetoStorage()

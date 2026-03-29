@@ -1,14 +1,14 @@
-import { data,getplaylist,loadDownbar,artist } from "./data/backend.js";
-import { playlist, playlistSavetoStorage,playlistloadFromStrorage } from "./data/cartPlaylist.js";
+import { data, getplaylist, loadDownbar, artist } from "./data/backend.js";
+import { playlist, playlistSavetoStorage, playlistloadFromStorage } from "./data/cartPlaylist.js";
 import { renderPlaying } from "./downbar/playing.js";
 
 
-playlistloadFromStrorage()
-let songHTML='';
+playlistloadFromStorage()
+let songHTML = '';
 
 data.forEach((song) => {
-    if(song.keyword==="recommended")
-    songHTML+=`
+    if (song.keyword === "recommended")
+        songHTML += `
       <div class="cover">
                 <div class="song-cover"><img src=${song.img}>
                 <button class="cover-button-play js-cover-button-play " data-song-id="${song.id}" >&#9654</button></div>
@@ -19,13 +19,13 @@ data.forEach((song) => {
             </div>
     `
 });
-document.querySelector('.js-section-album').innerHTML=songHTML
+document.querySelector('.js-section-album').innerHTML = songHTML
 
-let TopartistHTML='';
+let TopartistHTML = '';
 
-artist.forEach((artist)=>{
-   
-   TopartistHTML+=`
+artist.forEach((artist) => {
+
+    TopartistHTML += `
    <div class="cover">
                      <div class="artists-cover"><img src="imges/cat.jpg">
                      <button class="artist-button-play">&#9654</button></div>
@@ -37,25 +37,25 @@ artist.forEach((artist)=>{
    `
 
 });
-document.querySelector('.js-top-artist-section').innerHTML=TopartistHTML;
+document.querySelector('.js-top-artist-section').innerHTML = TopartistHTML;
 
-let song=JSON.parse(localStorage.getItem('song'))
-if(song){
-  loadDownbar(song)
+let song = JSON.parse(localStorage.getItem('song'))
+if (song) {
+    loadDownbar(song)
 }
 
-document.querySelectorAll('.js-cover-button-play').forEach((button)=>{
-    button.addEventListener('click',()=>{
-        let songId=button.dataset.songId
-        localStorage.setItem('songId',JSON.stringify(songId))
-        let song=getplaylist(data,songId)
-         
-        localStorage.setItem('song',JSON.stringify(song))
+document.querySelectorAll('.js-cover-button-play').forEach((button) => {
+    button.addEventListener('click', () => {
+        let songId = button.dataset.songId
+        localStorage.setItem('songId', JSON.stringify(songId))
+        let song = getplaylist(data, songId)
+
+        localStorage.setItem('song', JSON.stringify(song))
         console.log(song)
-       
-      
+
+
         loadDownbar(song)
-        
+
 
     })
 })
@@ -63,9 +63,9 @@ document.querySelectorAll('.js-cover-button-play').forEach((button)=>{
 
 
 
- playlistSavetoStorage()
+playlistSavetoStorage()
 console.log(playlist)
-renderPlaying(song,data)
+renderPlaying(song, data)
 
 
 
